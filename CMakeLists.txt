@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 file(GLOB_RECURSE SOURCES "src/*.h" "src/*.cpp")
 
 # 添加可执行文件
-add_executable(pruning_experiment ${SOURCES})
+add_executable(pruning_experiment ${SOURCES}
+        src/algorithms/multi_pivot_triangle_pruning.h
+        src/algorithms/multi_pivot_triangle_pruning.cpp)
 
 # 推荐：在开发时使用Debug模式，发布时使用Release模式以获得最佳性能
 # 可以通过 cmake .. -DCMAKE_BUILD_TYPE=Release 来指定
